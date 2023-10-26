@@ -9,6 +9,16 @@ class Queue
     private int _rear;
     private int[] _queueArray;
 
+    /**
+     Initializes a new instance of the Queue class with the specified size.
+    Parameters:
+          size: The maximum number of elements that the queue can hold.
+    Remarks:
+         This constructor sets the initial state of the queue. The size parameter
+         determines the maximum number of elements that the queue can hold.
+         The queue is initially empty, with both the front and rear pointers
+         set to -1. The _queueArray is also initialized with the specified size.
+     */
     public Queue(int size)
     {
         _maxSize = size;
@@ -16,6 +26,7 @@ class Queue
         _rear = -1;
         _queueArray = new int[_maxSize];
     }
+    // Enqueues an integer value into the queue.
 
     public void Enqueue(int value)
     {
@@ -32,6 +43,8 @@ class Queue
             _front = 0;
         }
     }
+    // Dequeues an element from the queue and returns it.
+    // If the queue is empty, a message is displayed and -1 is returned.
 
     public int Dequeue()
     {
@@ -51,6 +64,7 @@ class Queue
 
         return value;
     }
+    // Retrieves the element at the front of the queue without removing it.
 
     public int Peek()
     {
